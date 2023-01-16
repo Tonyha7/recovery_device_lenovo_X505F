@@ -4,7 +4,7 @@
 /boot            emmc              /dev/block/bootdevice/by-name/boot       flags=display="Boot"
 /recovery        emmc              /dev/block/bootdevice/by-name/recovery   flags=display="Recovery";backup=1
 
-/system          ext4              /dev/block/bootdevice/by-name/system     flags=backup=0;wipeingui
+/system          ext4              /dev/block/bootdevice/by-name/system     flags=backup=0
 /system_image    emmc              /dev/block/bootdevice/by-name/system     flags=display="System Image"
 /vendor          ext4              /dev/block/bootdevice/by-name/vendor     flags=wipeingui
 /vendor_image    emmc              /dev/block/bootdevice/by-name/vendor     flags=display="Vendor Image"
@@ -20,3 +20,7 @@
 
 /external_sd     auto              /dev/block/mmcblk1p1                     flags=display="MicroSD";storage;wipeingui;removable
 /usb-otg         auto              /dev/block/sda1                          flags=display="USB OTG";storage;wipeingui;removable
+
+/aboot           emmc              /dev/block/bootdevice/by-name/aboot      flags=display="aboot";backup=1
+#/splash          emmc              /dev/block/bootdevice/by-name/splash     flags=display="splash";backup=1
+#/lenovoraw       vfat              /dev/block/bootdevice/by-name/lenovoraw  flags=display="lenovoraw";backup=1
